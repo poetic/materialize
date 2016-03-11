@@ -16,6 +16,9 @@ Add the following lines to your scss file to load the components (E.G. main.scss
 @import "{poetic:materialize-scss}/sass/components/color";
 
 // Variables;
+// A full version of the "_variables.scss" file is available here: https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss 
+// Uncomment this line and comment the next one to override the variables file
+//@import "overrides/variables";
 @import "{poetic:materialize-scss}/sass/components/variables";
 
 // Reset
@@ -50,9 +53,6 @@ Add the following lines to your scss file to load the components (E.G. main.scss
 @import "{poetic:materialize-scss}/sass/components/date_picker/default.date.scss";
 @import "{poetic:materialize-scss}/sass/components/date_picker/default.time.scss";
 ```
-If you want, you can replace the `@import "{poetic:materialize-scss}/sass/components/variables";` file with one of your own to override values. (e. g.  `@import "overrides/variables";`
-
-A full version of the `overrides/_variables.scss` is available here: https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss 
 
 # ICONS
 Icons are automatically imported from this package.
