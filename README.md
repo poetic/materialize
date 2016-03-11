@@ -6,14 +6,52 @@ $ meteor remove materialize:materialize # if you have materialize installed
 ```
 
 # SCSS
-Add the following lines to your last-loaded scss file (E.G. main.scss):
+Add the following lines to your scss file to load the components (E.G. main.scss):
 ```
-// If you want to override materialize sass variables you can uncomment the following:
-// @import "{poetic:materialize-scss}/sass/components/_color.scss";
-// $primary-color: color("blue", "lighten-2");
+@charset "UTF-8";
 
-// import main scss file
-@import "{poetic:materialize-scss}/sass/materialize.scss";
+// Mixins
+// @import "{poetic:materialize-scss}/sass/components/prefixer";
+@import "{poetic:materialize-scss}/sass/components/mixins";
+@import "{poetic:materialize-scss}/sass/components/color";
+
+// Variables;
+// A full version of the "_variables.scss" file is available here: https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss 
+// Uncomment this line and comment the next one to override the variables file
+//@import "overrides/variables";
+@import "{poetic:materialize-scss}/sass/components/variables";
+
+// Reset
+@import "{poetic:materialize-scss}/sass/components/normalize";
+
+// components
+@import "{poetic:materialize-scss}/sass/components/global";
+@import "{poetic:materialize-scss}/sass/components/material-icons.scss";
+@import "{poetic:materialize-scss}/sass/components/icons-material-design";
+@import "{poetic:materialize-scss}/sass/components/grid";
+@import "{poetic:materialize-scss}/sass/components/navbar";
+@import "{poetic:materialize-scss}/sass/components/roboto";
+@import "{poetic:materialize-scss}/sass/components/typography";
+@import "{poetic:materialize-scss}/sass/components/cards";
+@import "{poetic:materialize-scss}/sass/components/toast";
+@import "{poetic:materialize-scss}/sass/components/tabs";
+@import "{poetic:materialize-scss}/sass/components/tooltip";
+@import "{poetic:materialize-scss}/sass/components/buttons";
+@import "{poetic:materialize-scss}/sass/components/dropdown";
+@import "{poetic:materialize-scss}/sass/components/waves";
+@import "{poetic:materialize-scss}/sass/components/modal";
+@import "{poetic:materialize-scss}/sass/components/collapsible";
+@import "{poetic:materialize-scss}/sass/components/chips";
+@import "{poetic:materialize-scss}/sass/components/materialbox";
+@import "{poetic:materialize-scss}/sass/components/form";
+@import "{poetic:materialize-scss}/sass/components/table_of_contents";
+@import "{poetic:materialize-scss}/sass/components/sideNav";
+@import "{poetic:materialize-scss}/sass/components/preloader";
+@import "{poetic:materialize-scss}/sass/components/slider";
+@import "{poetic:materialize-scss}/sass/components/carousel";
+@import "{poetic:materialize-scss}/sass/components/date_picker/default.scss";
+@import "{poetic:materialize-scss}/sass/components/date_picker/default.date.scss";
+@import "{poetic:materialize-scss}/sass/components/date_picker/default.time.scss";
 ```
 
 # ICONS
