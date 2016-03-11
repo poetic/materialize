@@ -80,7 +80,6 @@ Package.onUse(function (api) {
     'sass/components/_variables.scss',
     'sass/components/_waves.scss',
     'sass/components/_carousel.scss',
-    'sass/materialize.scss',
   ];
 
   api.addFiles(scssFiles, 'client');
