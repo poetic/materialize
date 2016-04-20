@@ -132,7 +132,8 @@ $dropdown-item-height: 50px !default;
 /* 9. Fonts
    ========================================================================== */
 
-$roboto-font-path: "../fonts/roboto/" !default;
+$roboto-font-path: "/packages/poetic_materialize-scss/dist/font/roboto/" !default;
+$icons-font-path: "/packages/poetic_materialize-scss/dist/font/material-design-icons/" !default;
 
 
 /* 10. Forms

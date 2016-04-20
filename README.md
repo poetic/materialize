@@ -1,74 +1,61 @@
-![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
-===========
+# INSTALL
+```
+$ meteor add fourseven:scss
+$ meteor add poetic:materialize-scss
+$ meteor remove materialize:materialize # if you have materialize installed
+```
 
-[![Travis CI](https://travis-ci.org/Dogfalo/materialize.svg?branch=master)](https://travis-ci.org/Dogfalo/materialize)[![Dependency Status](https://david-dm.org/Dogfalo/materialize.svg)](https://david-dm.org/Dogfalo/materialize)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# SCSS
+Add the following lines to your last-loaded scss file (E.G. main.scss):
+```
+// If you want to override materialize sass variables you can uncomment the following:
+// @import "{poetic:materialize-scss}/sass/components/_color.scss";
+// $primary-color: color("blue", "lighten-2");
 
-[Materialize](http://materializecss.com/), a CSS Framework based on material design
+// import main scss file
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+```
 
-### Current Version : v0.97.6
+# ICONS
+Icons are automatically imported from this package.
 
-## Sass Requirements:
-- Ruby Sass 3.3+, LibSass 0.6+
+You do NOT have to add an additional head element mentioned at http://materializecss.com/icons.html.
 
-## Supported Browsers:
-Chrome 35+, Firefox 31+, Safari 7+, IE 10+
+Read more about the MaterialIcons at https://google.github.io/material-design-icons/
 
-## Changelog
-- v0.97.6 (April 1st)
-  - **Removed deprecated material icons from project**
-  - **Changed /font directory to /fonts**
-  - Datepicker and ScrollSpy now compatible with jQuery 2.2.x
-  - Responsive tables now work with empty cells
-  - Added focus states to checkboxes, switches, and radio buttons
-  - Sidenav and Modals no longer cause flicker with scrollbar
-  - Materialbox overflow and z-index issues fixed
-  - Added new option for Card actions within a Card reveal
-- v0.97.5 (Dec 21, 2015)
-  - Fixed Meteor package crash
-- v0.97.4 (Dec 20, 2015)
-  - Added Jasmine testing with Travis CI
-  - Select bugfixes
-  - Grid Offset bugfix
-  - Dropdown overflow bugfix
-  - Range slider error bugfix
-- v0.97.3 (Nov 15, 2015)
-  - Meteor font issues fixed
-  - Select rendering issue fixed
-  - Added Push and Pull to grid
-  - Dynamic accordion appends fixed
-- v0.97.2 (Nov 8, 2015)
-  - Image support inside select
-  - Optgroup supported in select
-  - Multiple select added
-  - Card styling fixes
-  - Breadcrumbs added
-  - Scrollable tabs
-  - Tooltips and dropdowns position themselves more intelligently inside the window
-  - FAB menu is click-toggleable
-  - Horizontal FAB support added
-- v0.97.1 (Sep 13, 2015)
-  - Added new range slider with uses noUiSlider to provide powerful options
-  - Added CSS for Chips
-  - Toasts support adding of html elements
-  - Fixed select destroy/creation bug
-  - Bugfixes for dropdown, badges, collections, scrollfire
-  - Added default preloader color variable
-  - File input now supports multiple files and dynamically loaded elements
-- v0.97.0 (June 21, 2015)
-  - **Documentation changed to use Official Google Icon web font**
-  - **Input errors added**
-  - Flicker on Firefox on dropdowns fixed
-  - Pagination made more responsive
-  - Modal now prevents scrolling
-  - Modal animation added
-  - Support for multiple modals added
-  - Programmatic control of FAB to open/close added
-  - Programmatic control of slider to play/pause added
-  - Plus many more bug fixes
+# JAVASCRIPT
+Javascript is automatically imported from this package.
 
+# CHANGE LOG
 
-## Contributing
-[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
+- 2016-04-18 update to materializecss [0.97.6](https://github.com/Dogfalo/materialize/tree/v0.97.6#changelog)
+- 2016-01-28 update to materializecss [0.97.5](https://github.com/Dogfalo/materialize/tree/v0.97.5#changelog)
+- 2015-11-22 update to materializecss [0.97.3](https://github.com/Dogfalo/materialize/tree/v0.97.3#changelog)
+  - We rewrote the package as a fork and archived the previous gitrop. If you are looking for code in a version lower than 1.97.3, please check the archived [repo](https://github.com/poetic/meteor-materialize-sass-archived). (*Breaking*)
 
-## Testing
-We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](https://docs.google.com/document/d/1dVM6qGt_b_y9RRhr9X7oZfFydaJIEqB9CT7yekv-4XE/edit?usp=sharing)
+- 2015-10-01 update package for METEOR@1.2 (*Breaking*)
+  - fourseven:scss is updated to 3.3.3_1
+  - scss.json is not used anymore.
+  - index.scss is not autoupdated anymore, you need to manullay update index.scss.
+
+- 2015-06-26 upgrade to [0.97.0](https://github.com/Dogfalo/materialize/tree/v0.97.0#changelog)
+  - Icon Change (*Breaking*):
+
+    ```<i class="mdi-content-add"></i>``` is still supported.
+
+    However you should use ```<i class="material-icons">add</i>``` instead as
+    metioned in the materialize [doc](http://materializecss.com/icons.html).
+
+# FOR MAINTAINERS
+
+- HOW TO UPDATE TO NEW VERSIONS OF MATERIALIZECSS
+```
+git checkout master
+git pull https://github.com/Dogfalo/materialize.git master --tags
+git checkout meteor
+git rebase master
+// check if we need to add new files to package.js
+// change meteor package version
+// test
+meteor publish
+```
